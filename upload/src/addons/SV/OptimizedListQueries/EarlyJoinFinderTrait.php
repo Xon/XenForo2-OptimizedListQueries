@@ -31,6 +31,7 @@ trait EarlyJoinFinderTrait
 
         if ($countOnly || is_array($primaryKey))
         {
+            /** @noinspection PhpUndefinedClassInspection */
             return parent::getQuery($options);
         }
 
@@ -48,16 +49,20 @@ trait EarlyJoinFinderTrait
 
         $threshold = $this->getEarlyJoinThreshold();
 
-        if ($threshold <= 0 || $offset < $threshold || $this->parentFinder)
+        if ($this->parentFinder ||
+            $threshold <= 0 ||
+            !$limit ||
+            $offset / $limit < $threshold )
         {
+            /** @noinspection PhpUndefinedClassInspection */
             return parent::getQuery($options);
         }
 
         $subQueryOptions = $options;
         $subQueryOptions['fetchOnly'] = [$primaryKey];
 
-        $joinList = $this->joins;
         // do this before the outer-joins
+        /** @noinspection PhpUndefinedClassInspection */
         $innerSql = parent::getQuery($subQueryOptions);
 
         $defaultOrderSql = [];
