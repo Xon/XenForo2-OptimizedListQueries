@@ -108,7 +108,7 @@ trait EarlyJoinFinderTrait
             $fetch[] = '`' . $coreTable . '`.*';
         }
 
-        foreach ($joinList AS $join)
+        foreach ($this->joins AS $join)
         {
             $joinType = $join['exists'] ? 'INNER' : 'LEFT';
 
