@@ -1,6 +1,6 @@
 {
     "from_class": "XF\\Finder\\ConversationMessage",
     "to_class": "SV\\OptimizedListQueries\\XF\\Finder\\ConversationMessage",
-    "execute_order": 10,
+    "execute_order": 2147483000,
     "active": true
 }
