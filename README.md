@@ -1,8 +1,8 @@
 # OptimizedListQueries
 
-Optimized query for getting threads in a forum with large number of threads, or for conversations with a very high page count, and Likes Received/Reactions.
+Optimized query for getting threads in a forum with large number of threads, or for conversations with a very high page count.
 
-The Likes/Reactions received, conversations & forums use limit & offset to implement paging through the result set. 
+The conversations & forums use limit & offset to implement paging through the result set. 
 
 MySQL implements 'early row lookup' which results in the large select statement pulling in more data than is required.
 - http://stackoverflow.com/questions/4481388/why-does-mysql-higher-limit-offset-slow-the-query-down
