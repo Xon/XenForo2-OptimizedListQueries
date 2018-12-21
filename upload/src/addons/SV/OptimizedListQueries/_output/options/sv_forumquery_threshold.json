@@ -5,7 +5,7 @@
     "sub_options": [],
     "validation_class": "",
     "validation_method": "",
-    "default_value": "150",
+    "default_value": "100",
     "relations": {
         "performance": 10100
     }
