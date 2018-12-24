@@ -7,4 +7,5 @@ namespace SV\OptimizedListQueries\XF\Finder
 {
 	class XFCP_ConversationMessage extends \XF\Finder\ConversationMessage {}
 	class XFCP_Thread extends \XF\Finder\Thread {}
+	class XFCP_User extends \XF\Finder\User {}
 }

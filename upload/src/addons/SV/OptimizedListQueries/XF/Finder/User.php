@@ -5,9 +5,9 @@ namespace SV\OptimizedListQueries\XF\Finder;
 use SV\OptimizedListQueries\EarlyJoinFinderTrait;
 
 /**
- * Extends \XF\Finder\Thread
+ * Extends \XF\Finder\User
  */
-class Thread extends XFCP_Thread
+class User extends XFCP_User
 {
     use EarlyJoinFinderTrait;
 
@@ -17,11 +17,11 @@ class Thread extends XFCP_Thread
     public function getEarlyJoinThreshold()
     {
         $options = \XF::options();
-        if (!isset($options->sv_forumquery_threshold))
+        if (!isset($options->sv_memberlist_threshold))
         {
             return -1;
         }
 
-        return (int)$options->sv_forumquery_threshold;
+        return (int)$options->sv_memberlist_threshold;
     }
 }

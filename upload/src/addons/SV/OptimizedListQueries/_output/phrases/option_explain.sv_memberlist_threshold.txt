@@ -1,0 +1,1 @@
+After the configured number of pages, replaces the query to get users in the user list with a query optimized for <b>large</b> data sets.<br/>May be incompatible with some add-ons.<br/>-1 to disable.

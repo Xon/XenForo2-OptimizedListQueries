@@ -16,6 +16,12 @@ class ConversationMessage extends XFCP_ConversationMessage
      */
     public function getEarlyJoinThreshold()
     {
-        return (int)\XF::options()->sv_convquery_threshold;
+        $options = \XF::options();
+        if (!isset($options->sv_convquery_threshold))
+        {
+            return -1;
+        }
+
+        return (int)$options->sv_convquery_threshold;
     }
 }
