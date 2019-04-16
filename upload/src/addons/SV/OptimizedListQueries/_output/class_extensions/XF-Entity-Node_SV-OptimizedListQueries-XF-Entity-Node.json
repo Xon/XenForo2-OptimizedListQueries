@@ -1,0 +1,6 @@
+{
+    "from_class": "XF\\Entity\\Node",
+    "to_class": "SV\\OptimizedListQueries\\XF\\Entity\\Node",
+    "execute_order": 6869,
+    "active": true
+}
