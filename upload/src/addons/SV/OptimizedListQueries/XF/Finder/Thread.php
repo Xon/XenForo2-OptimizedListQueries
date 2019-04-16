@@ -2,7 +2,7 @@
 
 namespace SV\OptimizedListQueries\XF\Finder;
 
-use SV\OptimizedListQueries\EarlyJoinFinderTrait;
+use SV\Utils\Finder\EarlyJoinFinderTrait;
 
 /**
  * Extends \XF\Finder\Thread
