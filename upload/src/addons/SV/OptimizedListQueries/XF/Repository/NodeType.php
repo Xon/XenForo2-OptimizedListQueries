@@ -12,9 +12,9 @@ class NodeType extends XFCP_NodeType
         $output = parent::getNodeTypeCacheData();
 
         $kvp = $this->db()->fetchPairs('select node_type_id, count(*) from xf_node group by node_type_id');
-        foreach($kvp as $nodeTypeId => $usageCount)
+        foreach($output as $nodeTypeId => &$data)
         {
-            $output[$nodeTypeId]['use'] = $usageCount;
+            $data['use'] = isset($kvp[$nodeTypeId]) ? $kvp[$nodeTypeId] : 0;
         }
 
         return $output;

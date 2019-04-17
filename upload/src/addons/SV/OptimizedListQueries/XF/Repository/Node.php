@@ -25,7 +25,7 @@ class Node extends XFCP_Node
             $nodeTypes = $container->offsetGet('nodeTypes');
             // valid the usage count is including in the node-type
             $nodeType = reset($nodeTypes);
-            if (!isset($nodeType['use']))
+            if (!isset($nodeType['use']) || !isset($nodeType['entity_identifier']))
             {
                 /** @var \XF\Repository\NodeType $repo */
                 $repo = \XF::repository('XF:NodeType');
