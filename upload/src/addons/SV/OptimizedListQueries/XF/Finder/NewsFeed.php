@@ -15,7 +15,7 @@ class NewsFeed extends XFCP_NewsFeed
 
         if ($feedId)
         {
-            $eventDate = $this->_db->fetchOne('select event_date from xf_news_feed where news_feed_id < ' . $this->db->quote($feedId) . ' limit 1');
+            $eventDate = $this->db->fetchOne('select event_date from xf_news_feed where news_feed_id < ' . $this->db->quote($feedId) . ' limit 1');
 
             $this->where('event_date', '<=', $eventDate);
         }
