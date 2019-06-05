@@ -11,6 +11,7 @@ namespace SV\OptimizedListQueries\XF\Entity
 namespace SV\OptimizedListQueries\XF\Finder
 {
 	class XFCP_ConversationMessage extends \XF\Finder\ConversationMessage {}
+	class XFCP_NewsFeed extends \XF\Finder\NewsFeed {}
 	class XFCP_Node extends \XF\Finder\Node {}
 	class XFCP_Thread extends \XF\Finder\Thread {}
 	class XFCP_User extends \XF\Finder\User {}
