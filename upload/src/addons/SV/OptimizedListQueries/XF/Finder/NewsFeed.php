@@ -27,7 +27,10 @@ class NewsFeed extends XFCP_NewsFeed
     {
         if ($user->user_id && $user->Profile->following)
         {
-            $this->indexHint('use', 'userId_eventDate');
+            if (!$this->indexHints)
+            {
+                $this->indexHint('use', 'userId_eventDate');
+            }
         }
 
         return parent::forUser($user);
