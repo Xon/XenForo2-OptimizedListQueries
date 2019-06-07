@@ -31,6 +31,19 @@ class NewsFeed extends XFCP_NewsFeed
             {
                 $this->indexHint('use', 'userId_eventDate');
             }
+            else
+            {
+                $badHint = "FORCE INDEX (`eventDate`)";
+                // find 'force eventDate` and zap it.
+                foreach($this->indexHints as &$indexHint)
+                {
+                    if ($indexHint === $badHint)
+                    {
+                        $indexHint = "FORCE INDEX (`userId_eventDate`)";
+                        break;
+                    }
+                }
+            }
         }
 
         return parent::forUser($user);
