@@ -2,14 +2,14 @@
 
 namespace SV\OptimizedListQueries\XF\Finder;
 
-use SV\Utils\Finder\EarlyJoinFinderTrait2;
+use SV\Utils\Finder\EarlyJoinFinderTrait3;
 
 /**
  * Extends \XF\Finder\User
  */
 class User extends XFCP_User
 {
-    use EarlyJoinFinderTrait2;
+    use EarlyJoinFinderTrait3;
 
     /**
      * @return int

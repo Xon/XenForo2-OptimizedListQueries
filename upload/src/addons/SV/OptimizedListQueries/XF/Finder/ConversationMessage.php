@@ -2,14 +2,14 @@
 
 namespace SV\OptimizedListQueries\XF\Finder;
 
-use SV\Utils\Finder\EarlyJoinFinderTrait2;
+use SV\Utils\Finder\EarlyJoinFinderTrait3;
 
 /**
  * Extends \XF\Finder\ConversationMessage
  */
 class ConversationMessage extends XFCP_ConversationMessage
 {
-    use EarlyJoinFinderTrait2;
+    use EarlyJoinFinderTrait3;
 
     /**
      * @return int
