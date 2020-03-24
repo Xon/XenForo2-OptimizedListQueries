@@ -33,7 +33,7 @@ class NewsFeed extends XFCP_NewsFeed
             }
             else
             {
-                $badHint = "FORCE INDEX (`eventDate`)";
+                $badHint = "FORCE INDEX (`event_date`)";
                 // find 'force eventDate` and zap it.
                 foreach($this->indexHints as &$indexHint)
                 {
