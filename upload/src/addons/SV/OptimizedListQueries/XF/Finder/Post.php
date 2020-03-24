@@ -20,10 +20,7 @@ class Post extends XFCP_Post
             if (\strpos($order[0], $positionField) === 0 &&
                 \strpos($order[1], $postDateField) === 0)
             {
-                $tmp = $order[0];
-                $order[0] = $order[1];
-                $order[1] = $tmp;
-
+                \array_shift($order);
                 $this->order = $order;
             }
         }
