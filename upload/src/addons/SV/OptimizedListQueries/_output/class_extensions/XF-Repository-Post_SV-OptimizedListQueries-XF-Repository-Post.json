@@ -1,0 +1,6 @@
+{
+    "from_class": "XF\\Repository\\Post",
+    "to_class": "SV\\OptimizedListQueries\\XF\\Repository\\Post",
+    "execute_order": 6869,
+    "active": true
+}
