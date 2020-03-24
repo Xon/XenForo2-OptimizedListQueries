@@ -13,7 +13,10 @@ class Post extends XFCP_Post
     {
         /** @var \SV\OptimizedListQueries\XF\Finder\Post $finder */
         $finder = parent::findNewestPostsInThread($thread, $newerThan, $limits);
-        $finder->patchPostSortOrder();
+        if (\is_callable([$finder, 'patchPostSortOrder']))
+        {
+            $finder->patchPostSortOrder();
+        }
 
         return $finder;
     }
@@ -22,7 +25,10 @@ class Post extends XFCP_Post
     {
         /** @var \SV\OptimizedListQueries\XF\Finder\Post $finder */
         $finder = parent::findNextPostsInThread($thread, $newerThan, $limits);
-        $finder->patchPostSortOrder();
+        if (\is_callable([$finder, 'patchPostSortOrder']))
+        {
+            $finder->patchPostSortOrder();
+        }
 
         return $finder;
     }
