@@ -1,0 +1,6 @@
+{
+    "from_class": "XF\\Finder\\ReactionContent",
+    "to_class": "SV\\OptimizedListQueries\\XF\\Finder\\ReactionContent",
+    "execute_order": 6869,
+    "active": true
+}

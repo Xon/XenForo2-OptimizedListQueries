@@ -1,6 +1,6 @@
 # OptimizedListQueries
 
-Optimized query for getting threads in a forum with large number of threads, or for conversations with a very high page count.
+Optimized query for getting threads in a forum with large number of threads, or for conversations with a very high page count, or when a user has a huge number of received reactions
 
 The conversations & forums use limit & offset to implement paging through the result set. 
 
