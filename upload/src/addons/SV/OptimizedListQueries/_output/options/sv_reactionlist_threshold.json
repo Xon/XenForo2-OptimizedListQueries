@@ -7,6 +7,7 @@
     "validation_method": "",
     "default_value": "5",
     "relations": {
-        "performance": 10130
+        "performance": 10130,
+        "svOptimizedListQueries": 10130
     }
 }
