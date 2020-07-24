@@ -15,7 +15,6 @@ class Node extends XFCP_Node
         {
             return $this->em->getEmptyCollection();
         }
-
         if (Globals::$shimNodeList)
         {
             /** @var \SV\OptimizedListQueries\XF\Finder\Node $nodeFinder */

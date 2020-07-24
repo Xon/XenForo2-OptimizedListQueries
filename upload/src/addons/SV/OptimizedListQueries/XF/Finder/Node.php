@@ -2,7 +2,7 @@
 
 namespace SV\OptimizedListQueries\XF\Finder;
 
-use SV\Utils\Finder\ComplexJoinTrait;
+use SV\StandardLib\Finder\ComplexJoinTrait;
 
 /**
  * Extends \XF\Finder\Node
