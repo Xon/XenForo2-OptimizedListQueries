@@ -3,6 +3,12 @@
 // ################## THIS IS A GENERATED FILE ##################
 // DO NOT EDIT DIRECTLY. EDIT THE CLASS EXTENSIONS IN THE CONTROL PANEL.
 
+namespace SV\OptimizedListQueries\XFMG\Finder
+{
+	class XFCP_Album extends \XFMG\Finder\Album {}
+	class XFCP_MediaItem extends \XFMG\Finder\MediaItem {}
+}
+
 namespace SV\OptimizedListQueries\XF\Entity
 {
 	class XFCP_Node extends \XF\Entity\Node {}
