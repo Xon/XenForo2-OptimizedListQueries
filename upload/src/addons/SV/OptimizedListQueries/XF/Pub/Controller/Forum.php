@@ -12,7 +12,7 @@ class Forum extends XFCP_Forum
 {
     public function actionList(ParameterBag $params)
     {
-        Globals::$shimNodeList = true;
+        Globals::$shimNodeList = !empty(\XF::options()->svNodeListQueryChange);
         try
         {
             return parent::actionList($params);
@@ -25,7 +25,7 @@ class Forum extends XFCP_Forum
 
     public function actionForum(ParameterBag $params)
     {
-        Globals::$shimNodeList = true;
+        Globals::$shimNodeList = !empty(\XF::options()->svNodeListQueryChange);
         try
         {
             return parent::actionForum($params);

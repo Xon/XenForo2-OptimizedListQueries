@@ -1,0 +1,1 @@
+Fetch all the nodes at once instead of per-type
