@@ -13,7 +13,7 @@ class Post extends XFCP_Post
     public function patchPostSortOrder()
     {
         $order = $this->order;
-        if (count($order) >= 2)
+        if (\count($order) >= 2)
         {
             $postDateField = $this->columnSqlName('post_date');
             $positionField = $this->columnSqlName('position');
