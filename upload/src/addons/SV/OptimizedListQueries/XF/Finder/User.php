@@ -16,12 +16,6 @@ class User extends XFCP_User
      */
     public function getEarlyJoinThreshold()
     {
-        $options = \XF::options();
-        if (!isset($options->sv_memberlist_threshold))
-        {
-            return -1;
-        }
-
-        return (int)$options->sv_memberlist_threshold;
+        return (int)(\XF::options()->sv_memberlist_threshold ?? -1);
     }
 }

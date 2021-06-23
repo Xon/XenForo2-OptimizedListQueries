@@ -16,12 +16,6 @@ class ReactionContent extends XFCP_ReactionContent
      */
     protected function getEarlyJoinThreshold()
     {
-        $options = \XF::options();
-        if (!isset($options->sv_reactionlist_threshold))
-        {
-            return -1;
-        }
-
-        return (int)$options->sv_reactionlist_threshold;
+        return (int)(\XF::options()->sv_reactionlist_threshold ?? -1);
     }
 }

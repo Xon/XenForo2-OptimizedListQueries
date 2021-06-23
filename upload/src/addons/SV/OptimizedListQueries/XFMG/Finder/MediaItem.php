@@ -16,12 +16,6 @@ class MediaItem extends XFCP_MediaItem
      */
     protected function getEarlyJoinThreshold()
     {
-        $options = \XF::options();
-        if (!isset($options->sv_xfmg_mediaitem_threshold))
-        {
-            return -1;
-        }
-
-        return (int)$options->sv_xfmg_mediaitem_threshold;
+        return (int)(\XF::options()->sv_xfmg_mediaitem_threshold ?? -1);
     }
 }
