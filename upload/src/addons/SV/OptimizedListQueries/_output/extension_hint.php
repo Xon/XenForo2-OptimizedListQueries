@@ -3,6 +3,11 @@
 // ################## THIS IS A GENERATED FILE ##################
 // DO NOT EDIT DIRECTLY. EDIT THE CLASS EXTENSIONS IN THE CONTROL PANEL.
 
+namespace SV\OptimizedListQueries\SV\Threadmarks\Finder
+{
+	class XFCP_Threadmark extends \SV\Threadmarks\Finder\Threadmark {}
+}
+
 namespace SV\OptimizedListQueries\XFMG\Finder
 {
 	class XFCP_Album extends \XFMG\Finder\Album {}

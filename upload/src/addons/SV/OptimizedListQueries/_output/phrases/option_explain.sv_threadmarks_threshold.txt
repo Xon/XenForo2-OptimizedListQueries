@@ -1,0 +1,1 @@
+After the configured number of threadmarks, replaces the query to get threadmarks with a query optimized for <b>large</b> data sets.<br/>Requires Threadmarks v2.11.2+.<br/>-1 to disable.
