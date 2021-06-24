@@ -1,6 +1,6 @@
 {
     "from_class": "XFMG\\Finder\\MediaItem",
     "to_class": "SV\\OptimizedListQueries\\XFMG\\Finder\\MediaItem",
-    "execute_order": 2147483000,
+    "execute_order": 1,
     "active": true
 }
