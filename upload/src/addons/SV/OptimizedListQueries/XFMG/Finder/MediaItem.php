@@ -11,10 +11,7 @@ class MediaItem extends XFCP_MediaItem
 {
     use EarlyJoinFinderTrait;
 
-    /**
-     * @return int
-     */
-    protected function getEarlyJoinThreshold()
+    protected function getEarlyJoinThreshold(int $offset = null, int $limit = null, array $options = []): int
     {
         return (int)(\XF::options()->sv_xfmg_mediaitem_threshold ?? -1);
     }
