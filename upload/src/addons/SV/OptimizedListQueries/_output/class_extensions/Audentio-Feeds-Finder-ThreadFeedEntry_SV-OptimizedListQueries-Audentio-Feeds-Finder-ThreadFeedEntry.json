@@ -1,0 +1,6 @@
+{
+    "from_class": "Audentio\\Feeds\\Finder\\ThreadFeedEntry",
+    "to_class": "SV\\OptimizedListQueries\\Audentio\\Feeds\\Finder\\ThreadFeedEntry",
+    "execute_order": 10,
+    "active": true
+}

@@ -3,6 +3,11 @@
 // ################## THIS IS A GENERATED FILE ##################
 // DO NOT EDIT DIRECTLY. EDIT THE CLASS EXTENSIONS IN THE CONTROL PANEL.
 
+namespace SV\OptimizedListQueries\Audentio\Feeds\Finder
+{
+	class XFCP_ThreadFeedEntry extends \Audentio\Feeds\Finder\ThreadFeedEntry {}
+}
+
 namespace SV\OptimizedListQueries\SV\Threadmarks\Finder
 {
 	class XFCP_Threadmark extends \SV\Threadmarks\Finder\Threadmark {}

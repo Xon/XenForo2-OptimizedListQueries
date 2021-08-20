@@ -1,0 +1,14 @@
+{
+    "edit_format": "spinbox",
+    "edit_format_params": "min=-1",
+    "data_type": "integer",
+    "sub_options": [],
+    "validation_class": "",
+    "validation_method": "",
+    "advanced": false,
+    "default_value": "2",
+    "relations": {
+        "performance": 10300,
+        "svOptimizedListQueries": 10300
+    }
+}
