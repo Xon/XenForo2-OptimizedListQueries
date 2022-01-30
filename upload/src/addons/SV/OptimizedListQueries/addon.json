@@ -2,8 +2,8 @@
     "legacy_addon_id": "SV_OptimizedListQueries",
     "title": "Optimized List Queries",
     "description": "A collection of replacement queries for getting lists of stuff aimed at very large forums.",
-    "version_id": 2090001,
-    "version_string": "2.9.0",
+    "version_id": 2100000,
+    "version_string": "2.10.0",
     "dev": "Xon",
     "dev_url": "https://atelieraphelion.com",
     "faq_url": "",
@@ -13,6 +13,9 @@
         "XF": [2010070, "XenForo 2.1.0+"],
         "php": ["7.0.0", "PHP 7.0.0+"],
         "SV/StandardLib": [1070100,"Standard Library by Xon v1.7.1+"]
+    },
+    "require-soft": {
+        "SV/StandardLib": [1100000, "Standard Library by Xon v1.10.0+", false]
     },
     "icon": "fa-forward"
 }

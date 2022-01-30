@@ -27,6 +27,7 @@ namespace SV\OptimizedListQueries\XF\Entity
 namespace SV\OptimizedListQueries\XF\Finder
 {
 	class XFCP_ConversationMessage extends \XF\Finder\ConversationMessage {}
+	class XFCP_ConversationUser extends \XF\Finder\ConversationUser {}
 	class XFCP_NewsFeed extends \XF\Finder\NewsFeed {}
 	class XFCP_Node extends \XF\Finder\Node {}
 	class XFCP_Post extends \XF\Finder\Post {}

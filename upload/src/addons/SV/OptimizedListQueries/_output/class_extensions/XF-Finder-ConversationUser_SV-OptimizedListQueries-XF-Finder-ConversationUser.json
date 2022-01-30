@@ -1,0 +1,6 @@
+{
+    "from_class": "XF\\Finder\\ConversationUser",
+    "to_class": "SV\\OptimizedListQueries\\XF\\Finder\\ConversationUser",
+    "execute_order": 1,
+    "active": true
+}

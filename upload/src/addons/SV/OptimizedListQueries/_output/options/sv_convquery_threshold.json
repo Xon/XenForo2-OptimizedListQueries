@@ -8,7 +8,7 @@
     "advanced": false,
     "default_value": "100",
     "relations": {
-        "performance": 10110,
-        "svOptimizedListQueries": 10110
+        "performance": 10115,
+        "svOptimizedListQueries": 10115
     }
 }
