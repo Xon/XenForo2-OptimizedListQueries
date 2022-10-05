@@ -1,0 +1,6 @@
+{
+    "from_class": "XenAddons\\RMS\\Finder\\Item",
+    "to_class": "SV\\OptimizedListQueries\\XenAddons\\RMS\\Finder\\Item",
+    "execute_order": 1,
+    "active": true
+}

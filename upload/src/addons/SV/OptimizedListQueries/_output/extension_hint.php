@@ -13,6 +13,11 @@ namespace SV\OptimizedListQueries\SV\Threadmarks\Finder
 	class XFCP_Threadmark extends \SV\Threadmarks\Finder\Threadmark {}
 }
 
+namespace SV\OptimizedListQueries\XenAddons\RMS\Finder
+{
+	class XFCP_Item extends \XenAddons\RMS\Finder\Item {}
+}
+
 namespace SV\OptimizedListQueries\XFMG\Finder
 {
 	class XFCP_Album extends \XFMG\Finder\Album {}
