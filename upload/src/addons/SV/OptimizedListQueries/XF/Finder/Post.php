@@ -3,7 +3,7 @@
 namespace SV\OptimizedListQueries\XF\Finder;
 
 /**
- * Extends \XF\Finder\Post
+ * @Extends \XF\Finder\Post
  */
 class Post extends XFCP_Post
 {

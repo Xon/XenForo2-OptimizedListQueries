@@ -5,7 +5,7 @@ namespace SV\OptimizedListQueries\XF\Finder;
 use SV\StandardLib\Finder\EarlyJoinFinderTrait;
 
 /**
- * Extends \XF\Finder\ReactionContent
+ * @Extends \XF\Finder\ReactionContent
  */
 class ReactionContent extends XFCP_ReactionContent
 {

@@ -5,7 +5,7 @@ namespace SV\OptimizedListQueries\XFMG\Finder;
 use SV\StandardLib\Finder\EarlyJoinFinderTrait;
 
 /**
- * Extends \XFMG\Finder\Album
+ * @Extends \XFMG\Finder\Album
  */
 class Album extends XFCP_Album
 {

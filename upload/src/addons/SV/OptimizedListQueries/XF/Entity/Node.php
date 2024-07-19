@@ -3,7 +3,7 @@
 namespace SV\OptimizedListQueries\XF\Entity;
 
 /**
- * Extends \XF\Entity\Node
+ * @Extends \XF\Entity\Node
  */
 class Node extends XFCP_Node
 {

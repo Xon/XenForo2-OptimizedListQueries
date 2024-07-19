@@ -5,7 +5,7 @@ namespace SV\OptimizedListQueries\XFMG\Finder;
 use SV\StandardLib\Finder\EarlyJoinFinderTrait;
 
 /**
- * Extends \XFMG\Finder\MediaItem
+ * @Extends \XFMG\Finder\MediaItem
  */
 class MediaItem extends XFCP_MediaItem
 {

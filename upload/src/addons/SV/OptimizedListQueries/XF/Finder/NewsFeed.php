@@ -5,7 +5,7 @@ namespace SV\OptimizedListQueries\XF\Finder;
 
 
 /**
- * Extends \XF\Finder\NewsFeed
+ * @Extends \XF\Finder\NewsFeed
  */
 class NewsFeed extends XFCP_NewsFeed
 {

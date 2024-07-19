@@ -3,7 +3,7 @@
 namespace SV\OptimizedListQueries\XF\Repository;
 
 /**
- * Extends \XF\Repository\NodeType
+ * @Extends \XF\Repository\NodeType
  */
 class NodeType extends XFCP_NodeType
 {

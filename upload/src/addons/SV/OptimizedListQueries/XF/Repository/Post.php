@@ -5,7 +5,7 @@ namespace SV\OptimizedListQueries\XF\Repository;
 
 
 /**
- * Extends \XF\Repository\Post
+ * @Extends \XF\Repository\Post
  */
 class Post extends XFCP_Post
 {

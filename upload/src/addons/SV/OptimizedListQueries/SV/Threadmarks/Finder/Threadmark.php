@@ -7,7 +7,7 @@ use SV\Threadmarks\Entity\ThreadmarkContainerInterface;
 use XF\Mvc\Entity\Entity;
 
 /**
- * Extends \SV\Threadmarks\Finder\Threadmark
+ * @Extends \SV\Threadmarks\Finder\Threadmark
  */
 class Threadmark extends XFCP_Threadmark
 {

@@ -5,7 +5,7 @@ namespace SV\OptimizedListQueries\Audentio\Feeds\Finder;
 use SV\StandardLib\Finder\EarlyJoinFinderTrait;
 
 /**
- * Extends \Audentio\Feeds\Finder\ThreadFeedEntry
+ * @Extends \Audentio\Feeds\Finder\ThreadFeedEntry
  */
 class ThreadFeedEntry extends XFCP_ThreadFeedEntry
 {

@@ -5,7 +5,7 @@ namespace SV\OptimizedListQueries\XF\Repository;
 use SV\OptimizedListQueries\Globals;
 
 /**
- * Extends \XF\Repository\Node
+ * @Extends \XF\Repository\Node
  */
 class Node extends XFCP_Node
 {
