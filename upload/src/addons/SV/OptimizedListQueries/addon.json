@@ -8,7 +8,10 @@
     "dev_url": "https://atelieraphelion.com",
     "faq_url": "",
     "support_url": "https://xenforo.com/community/resources/optimized-list-queries-by-xon.6869/",
-    "extra_urls": [],
+    "extra_urls": {
+        "License": "https://atelieraphelion.com/products/optimized-list-queries.231/copyright",
+        "Add-on site": "https://atelieraphelion.com/products/optimized-list-queries.231/"
+    },
     "require": {
         "SV/StandardLib": [
             2001200000,
