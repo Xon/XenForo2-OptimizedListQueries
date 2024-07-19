@@ -3,6 +3,7 @@
 namespace SV\OptimizedListQueries\XF\Repository;
 
 use XF\Entity\Thread as ThreadEntity;
+use function is_callable;
 
 /**
  * @Extends \XF\Repository\Post
@@ -13,7 +14,7 @@ class Post extends XFCP_Post
     {
         /** @var \SV\OptimizedListQueries\XF\Finder\Post $finder */
         $finder = parent::findNewestPostsInThread($thread, $newerThan, $limits);
-        if (\is_callable([$finder, 'patchPostSortOrder']))
+        if (is_callable([$finder, 'patchPostSortOrder']))
         {
             $finder->patchPostSortOrder();
         }
@@ -25,7 +26,7 @@ class Post extends XFCP_Post
     {
         /** @var \SV\OptimizedListQueries\XF\Finder\Post $finder */
         $finder = parent::findNextPostsInThread($thread, $newerThan, $limits);
-        if (\is_callable([$finder, 'patchPostSortOrder']))
+        if (is_callable([$finder, 'patchPostSortOrder']))
         {
             $finder->patchPostSortOrder();
         }

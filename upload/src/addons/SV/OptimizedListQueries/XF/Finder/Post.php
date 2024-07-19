@@ -2,6 +2,10 @@
 
 namespace SV\OptimizedListQueries\XF\Finder;
 
+use function array_shift;
+use function count;
+use function strpos;
+
 /**
  * @Extends \XF\Finder\Post
  */
@@ -13,14 +17,14 @@ class Post extends XFCP_Post
     public function patchPostSortOrder()
     {
         $order = $this->order;
-        if (\count($order) >= 2)
+        if (count($order) >= 2)
         {
             $postDateField = $this->columnSqlName('post_date');
             $positionField = $this->columnSqlName('position');
-            if (\strpos($order[0], $positionField) === 0 &&
-                \strpos($order[1], $postDateField) === 0)
+            if (strpos($order[0], $positionField) === 0 &&
+                strpos($order[1], $postDateField) === 0)
             {
-                \array_shift($order);
+                array_shift($order);
                 $this->order = $order;
             }
         }

@@ -4,6 +4,7 @@ namespace SV\OptimizedListQueries\XF\Repository;
 
 use SV\OptimizedListQueries\Globals;
 use XF\Mvc\Entity\Entity;
+use function reset;
 
 /**
  * @Extends \XF\Repository\Node
@@ -24,7 +25,7 @@ class Node extends XFCP_Node
             $container = $this->app()->container();
             $nodeTypes = $container->offsetGet('nodeTypes');
             // valid the usage count is including in the node-type
-            $nodeType = \reset($nodeTypes);
+            $nodeType = reset($nodeTypes);
             if (!isset($nodeType['use']) || !isset($nodeType['entity_identifier']))
             {
                 /** @var \XF\Repository\NodeType $repo */
@@ -96,7 +97,7 @@ class Node extends XFCP_Node
             $container = $this->app()->container();
             $nodeTypes = $container->offsetGet('nodeTypes');
             // valid the usage count is including in the node-type
-            $nodeType = \reset($nodeTypes);
+            $nodeType = reset($nodeTypes);
             if (!isset($nodeType['use']))
             {
                 /** @var \XF\Repository\NodeType $repo */
