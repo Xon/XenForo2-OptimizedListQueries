@@ -11,7 +11,7 @@ class ConversationUser extends XFCP_ConversationUser
 {
     use EarlyJoinFinderTrait;
 
-    protected function getEarlyJoinThreshold(int $offset = null, int $limit = null, array $options = []): int
+    protected function getEarlyJoinThreshold(?int $offset = null, ?int $limit = null, array $options = []): int
     {
         if ($limit === null || $limit === 1 && $offset === 0)
         {

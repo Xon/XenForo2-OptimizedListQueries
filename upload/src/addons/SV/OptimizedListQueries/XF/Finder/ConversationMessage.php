@@ -11,7 +11,7 @@ class ConversationMessage extends XFCP_ConversationMessage
 {
     use EarlyJoinFinderTrait;
 
-    protected function getEarlyJoinThreshold(int $offset = null, int $limit = null, array $options = []): int
+    protected function getEarlyJoinThreshold(?int $offset = null, ?int $limit = null, array $options = []): int
     {
         return (int)(\XF::options()->sv_convquery_threshold ?? -1);
     }

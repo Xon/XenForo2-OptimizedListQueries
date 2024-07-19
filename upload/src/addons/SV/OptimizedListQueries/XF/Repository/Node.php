@@ -13,7 +13,7 @@ use function reset;
  */
 class Node extends XFCP_Node
 {
-    public function getNodeList(\XF\Entity\Node $withinNode = null)
+    public function getNodeList(?\XF\Entity\Node $withinNode = null)
     {
         if ($withinNode && !$withinNode->hasChildren())
         {
@@ -80,7 +80,7 @@ class Node extends XFCP_Node
         return parent::loadNodeTypeDataForNodes($nodes);
     }
 
-    public function getFullNodeList(\XF\Entity\Node $withinNode = null, $with = null)
+    public function getFullNodeList(?\XF\Entity\Node $withinNode = null, $with = null)
     {
         if (Globals::$shimNodeList)
         {

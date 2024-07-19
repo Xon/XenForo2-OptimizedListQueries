@@ -43,7 +43,7 @@ class Threadmark extends XFCP_Threadmark
         return parent::withContentForContainer($container, $loadWith);
     }
 
-    protected function getEarlyJoinThreshold(int $offset = null, int $limit = null, array $options = []): int
+    protected function getEarlyJoinThreshold(?int $offset = null, ?int $limit = null, array $options = []): int
     {
         return ($this->largeThreadmarkCollection && $this->isThreadmarkDateOrder) ? 0 : -1;
     }
