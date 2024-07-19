@@ -3,6 +3,7 @@
 namespace SV\OptimizedListQueries\XF\Repository;
 
 use SV\OptimizedListQueries\Globals;
+use XF\Mvc\Entity\Entity;
 
 /**
  * @Extends \XF\Repository\Node
@@ -53,7 +54,7 @@ class Node extends XFCP_Node
 
                 $nodeFinder->complexJoin([
                     'entity' => $entityIdent,
-                    'type' => \XF\Mvc\Entity\Entity::TO_ONE,
+                    'type' => Entity::TO_ONE,
                     'conditions' => 'node_id',
                     'primary' => true,
                     'with' => $extraWith,
@@ -125,7 +126,7 @@ class Node extends XFCP_Node
 
                 $nodeFinder->complexJoin([
                     'entity' => $entityIdent,
-                    'type' => \XF\Mvc\Entity\Entity::TO_ONE,
+                    'type' => Entity::TO_ONE,
                     'conditions' => 'node_id',
                     'primary' => true,
                     'with' => $extraWith,

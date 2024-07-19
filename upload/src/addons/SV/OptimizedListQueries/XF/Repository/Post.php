@@ -2,14 +2,14 @@
 
 namespace SV\OptimizedListQueries\XF\Repository;
 
-
+use XF\Entity\Thread as ThreadEntity;
 
 /**
  * @Extends \XF\Repository\Post
  */
 class Post extends XFCP_Post
 {
-    public function findNewestPostsInThread(\XF\Entity\Thread $thread, $newerThan, array $limits = [])
+    public function findNewestPostsInThread(ThreadEntity $thread, $newerThan, array $limits = [])
     {
         /** @var \SV\OptimizedListQueries\XF\Finder\Post $finder */
         $finder = parent::findNewestPostsInThread($thread, $newerThan, $limits);
@@ -21,7 +21,7 @@ class Post extends XFCP_Post
         return $finder;
     }
 
-    public function findNextPostsInThread(\XF\Entity\Thread $thread, $newerThan, array $limits = [])
+    public function findNextPostsInThread(ThreadEntity $thread, $newerThan, array $limits = [])
     {
         /** @var \SV\OptimizedListQueries\XF\Finder\Post $finder */
         $finder = parent::findNextPostsInThread($thread, $newerThan, $limits);
