@@ -3,7 +3,9 @@
 namespace SV\OptimizedListQueries\XF\Repository;
 
 use SV\OptimizedListQueries\Globals;
+use SV\StandardLib\Helper;
 use XF\Mvc\Entity\Entity;
+use XF\Repository\NodeType as NodeTypeRepo;
 use function reset;
 
 /**
@@ -28,8 +30,7 @@ class Node extends XFCP_Node
             $nodeType = reset($nodeTypes);
             if (!isset($nodeType['use']) || !isset($nodeType['entity_identifier']))
             {
-                /** @var \XF\Repository\NodeType $repo */
-                $repo = \XF::repository('XF:NodeType');
+                $repo = Helper::repository(NodeTypeRepo::class);
                 $nodeTypes = $repo->rebuildNodeTypeCache();
                 $this->app()->container()->decache('nodeTypes');
             }
@@ -84,7 +85,8 @@ class Node extends XFCP_Node
         if (Globals::$shimNodeList)
         {
             /** @var \SV\OptimizedListQueries\XF\Finder\Node $nodeFinder */
-            $nodeFinder = $this->finder('XF:Node')->order('lft');
+            $nodeFinder = Helper::finder(\XF\Finder\Node::class);
+            $nodeFinder = $nodeFinder->order('lft');
             if ($withinNode)
             {
                 $nodeFinder->descendantOf($withinNode);
@@ -100,8 +102,7 @@ class Node extends XFCP_Node
             $nodeType = reset($nodeTypes);
             if (!isset($nodeType['use']))
             {
-                /** @var \XF\Repository\NodeType $repo */
-                $repo = \XF::repository('XF:NodeType');
+                $repo = Helper::repository(NodeTypeRepo::class);
                 $nodeTypes = $repo->rebuildNodeTypeCache();
                 $this->app()->container()->decache('nodeTypes');
             }

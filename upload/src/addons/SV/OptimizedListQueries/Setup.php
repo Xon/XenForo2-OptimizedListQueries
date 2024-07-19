@@ -2,11 +2,13 @@
 
 namespace SV\OptimizedListQueries;
 
+use SV\StandardLib\Helper;
 use SV\StandardLib\InstallerHelper;
 use XF\AddOn\AbstractSetup;
 use XF\AddOn\StepRunnerInstallTrait;
 use XF\AddOn\StepRunnerUninstallTrait;
 use XF\AddOn\StepRunnerUpgradeTrait;
+use XF\Repository\NodeType as NodeTypeRepo;
 
 class Setup extends AbstractSetup
 {
@@ -17,22 +19,19 @@ class Setup extends AbstractSetup
 
     public function postInstall(array &$stateChanges): void
     {
-        /** @var \XF\Repository\NodeType $repo */
-        $repo = \XF::repository('XF:NodeType');
+        $repo = Helper::repository(NodeTypeRepo::class);
         $repo->rebuildNodeTypeCache();
     }
 
     public function postUpgrade($previousVersion, array &$stateChanges): void
     {
-        /** @var \XF\Repository\NodeType $repo */
-        $repo = \XF::repository('XF:NodeType');
+        $repo = Helper::repository(NodeTypeRepo::class);
         $repo->rebuildNodeTypeCache();
     }
 
     public function uninstallStep1(): void
     {
-        /** @var \XF\Repository\NodeType $repo */
-        $repo = \XF::repository('XF:NodeType');
+        $repo = Helper::repository(NodeTypeRepo::class);
         $repo->rebuildNodeTypeCache();
     }
 }
