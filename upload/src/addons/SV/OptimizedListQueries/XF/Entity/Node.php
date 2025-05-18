@@ -16,7 +16,7 @@ class Node extends XFCP_Node
 
         if ($this->isInsert() || $this->isChanged('node_type_id'))
         {
-            \XF::runLater(function () {
+            \XF::runLater(function (): void {
                 $repo = Helper::repository(NodeTypeRepo::class);
                 $repo->rebuildNodeTypeCache();
                 $this->app()->container()->decache('nodeTypes');
@@ -27,7 +27,7 @@ class Node extends XFCP_Node
     protected function _postDelete()
     {
         parent::_postDelete();
-        \XF::runLater(function () {
+        \XF::runLater(function (): void {
             $repo = Helper::repository(NodeTypeRepo::class);
             $repo->rebuildNodeTypeCache();
             $this->app()->container()->decache('nodeTypes');
