@@ -16,6 +16,10 @@ class Post extends XFCP_Post
      */
     public function patchPostSortOrder()
     {
+        if (\XF::$versionId > 2010870)
+        {
+            return;
+        }
         $order = $this->order;
         if (count($order) >= 2)
         {
