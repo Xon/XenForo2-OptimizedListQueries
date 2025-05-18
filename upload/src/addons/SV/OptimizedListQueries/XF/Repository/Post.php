@@ -2,17 +2,18 @@
 
 namespace SV\OptimizedListQueries\XF\Repository;
 
+use SV\OptimizedListQueries\XF\Finder\Post as ExtendedPostFinder;
 use XF\Entity\Thread as ThreadEntity;
 use function is_callable;
 
 /**
- * @Extends \XF\Repository\Post
+ * @extends \XF\Repository\Post
  */
 class Post extends XFCP_Post
 {
     public function findNewestPostsInThread(ThreadEntity $thread, $newerThan, array $limits = [])
     {
-        /** @var \SV\OptimizedListQueries\XF\Finder\Post $finder */
+        /** @var ExtendedPostFinder $finder */
         $finder = parent::findNewestPostsInThread($thread, $newerThan, $limits);
         if (is_callable([$finder, 'patchPostSortOrder']))
         {
@@ -24,7 +25,7 @@ class Post extends XFCP_Post
 
     public function findNextPostsInThread(ThreadEntity $thread, $newerThan, array $limits = [])
     {
-        /** @var \SV\OptimizedListQueries\XF\Finder\Post $finder */
+        /** @var ExtendedPostFinder $finder */
         $finder = parent::findNextPostsInThread($thread, $newerThan, $limits);
         if (is_callable([$finder, 'patchPostSortOrder']))
         {

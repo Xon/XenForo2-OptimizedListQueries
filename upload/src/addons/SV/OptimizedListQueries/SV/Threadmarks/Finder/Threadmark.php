@@ -4,10 +4,11 @@ namespace SV\OptimizedListQueries\SV\Threadmarks\Finder;
 
 use SV\StandardLib\Finder\EarlyJoinFinderTrait;
 use SV\Threadmarks\Entity\ThreadmarkContainerInterface;
+use SV\Threadmarks\Finder\Threadmark as ExtendedThreadmarkFinder;
 use XF\Mvc\Entity\Entity;
 
 /**
- * @Extends \SV\Threadmarks\Finder\Threadmark
+ * @extends ExtendedThreadmarkFinder
  */
 class Threadmark extends XFCP_Threadmark
 {
@@ -31,7 +32,7 @@ class Threadmark extends XFCP_Threadmark
     /**
      * @param Entity|ThreadmarkContainerInterface $container
      * @param bool                         $loadWith
-     * @return \SV\Threadmarks\Finder\Threadmark
+     * @return ExtendedThreadmarkFinder
      */
     public function withContentForContainer(ThreadmarkContainerInterface $container, $loadWith = false)
     {

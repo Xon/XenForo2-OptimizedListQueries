@@ -3,10 +3,10 @@
 namespace SV\OptimizedListQueries\XF\Entity;
 
 use SV\StandardLib\Helper;
-use XF\Repository\NodeType as NodeTypeRepo;
+use XF\Repository\NodeType as NodeTypeRepository;
 
 /**
- * @Extends \XF\Entity\Node
+ * @extends \XF\Entity\Node
  */
 class Node extends XFCP_Node
 {
@@ -17,7 +17,7 @@ class Node extends XFCP_Node
         if ($this->isInsert() || $this->isChanged('node_type_id'))
         {
             \XF::runLater(function (): void {
-                $repo = Helper::repository(NodeTypeRepo::class);
+                $repo = Helper::repository(NodeTypeRepository::class);
                 $repo->rebuildNodeTypeCache();
                 $this->app()->container()->decache('nodeTypes');
             });
@@ -28,7 +28,7 @@ class Node extends XFCP_Node
     {
         parent::_postDelete();
         \XF::runLater(function (): void {
-            $repo = Helper::repository(NodeTypeRepo::class);
+            $repo = Helper::repository(NodeTypeRepository::class);
             $repo->rebuildNodeTypeCache();
             $this->app()->container()->decache('nodeTypes');
         });

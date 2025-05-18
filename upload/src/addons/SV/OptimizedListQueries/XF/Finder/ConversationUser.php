@@ -5,7 +5,7 @@ namespace SV\OptimizedListQueries\XF\Finder;
 use SV\StandardLib\Finder\EarlyJoinFinderTrait;
 
 /**
- * @Extends \XF\Finder\ConversationUser
+ * @extends \XF\Finder\ConversationUser
  */
 class ConversationUser extends XFCP_ConversationUser
 {

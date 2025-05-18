@@ -3,25 +3,28 @@
 namespace SV\OptimizedListQueries\XF\Repository;
 
 use SV\OptimizedListQueries\Globals;
+use SV\OptimizedListQueries\XF\Finder\Node as ExtendedNodeFinder;
 use SV\StandardLib\Helper;
+use XF\Entity\Node as NodeEntity;
+use XF\Finder\Node as NodeFinder;
 use XF\Mvc\Entity\Entity;
-use XF\Repository\NodeType as NodeTypeRepo;
+use XF\Repository\NodeType as NodeTypeRepository;
 use function reset;
 
 /**
- * @Extends \XF\Repository\Node
+ * @extends \XF\Repository\Node
  */
 class Node extends XFCP_Node
 {
-    public function getNodeList(?\XF\Entity\Node $withinNode = null)
+    public function getNodeList(?NodeEntity $withinNode = null)
     {
         if ($withinNode && !$withinNode->hasChildren())
         {
             return $this->em->getEmptyCollection();
         }
-        if (Globals::$shimNodeList)
+        if (Globals::$shimNodeList ?? false)
         {
-            /** @var \SV\OptimizedListQueries\XF\Finder\Node $nodeFinder */
+            /** @var ExtendedNodeFinder $nodeFinder */
             $nodeFinder = $this->findNodesForList($withinNode);
 
             $container = $this->app()->container();
@@ -30,7 +33,7 @@ class Node extends XFCP_Node
             $nodeType = reset($nodeTypes);
             if (!isset($nodeType['use']) || !isset($nodeType['entity_identifier']))
             {
-                $repo = Helper::repository(NodeTypeRepo::class);
+                $repo = Helper::repository(NodeTypeRepository::class);
                 $nodeTypes = $repo->rebuildNodeTypeCache();
                 $this->app()->container()->decache('nodeTypes');
             }
@@ -72,7 +75,7 @@ class Node extends XFCP_Node
 
     public function loadNodeTypeDataForNodes($nodes)
     {
-        if (Globals::$shimNodeList)
+        if (Globals::$shimNodeList ?? false)
         {
             return $nodes;
         }
@@ -80,12 +83,12 @@ class Node extends XFCP_Node
         return parent::loadNodeTypeDataForNodes($nodes);
     }
 
-    public function getFullNodeList(?\XF\Entity\Node $withinNode = null, $with = null)
+    public function getFullNodeList(?NodeEntity $withinNode = null, $with = null)
     {
-        if (Globals::$shimNodeList)
+        if (Globals::$shimNodeList ?? false)
         {
-            /** @var \SV\OptimizedListQueries\XF\Finder\Node $nodeFinder */
-            $nodeFinder = Helper::finder(\XF\Finder\Node::class);
+            /** @var ExtendedNodeFinder $nodeFinder */
+            $nodeFinder = Helper::finder(NodeFinder::class);
             $nodeFinder = $nodeFinder->order('lft');
             if ($withinNode)
             {
@@ -102,7 +105,7 @@ class Node extends XFCP_Node
             $nodeType = reset($nodeTypes);
             if (!isset($nodeType['use']))
             {
-                $repo = Helper::repository(NodeTypeRepo::class);
+                $repo = Helper::repository(NodeTypeRepository::class);
                 $nodeTypes = $repo->rebuildNodeTypeCache();
                 $this->app()->container()->decache('nodeTypes');
             }

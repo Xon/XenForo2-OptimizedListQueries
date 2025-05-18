@@ -7,7 +7,7 @@ use function count;
 use function strpos;
 
 /**
- * @Extends \XF\Finder\Post
+ * @extends \XF\Finder\Post
  */
 class Post extends XFCP_Post
 {

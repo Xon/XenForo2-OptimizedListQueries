@@ -8,7 +8,7 @@ use XF\AddOn\AbstractSetup;
 use XF\AddOn\StepRunnerInstallTrait;
 use XF\AddOn\StepRunnerUninstallTrait;
 use XF\AddOn\StepRunnerUpgradeTrait;
-use XF\Repository\NodeType as NodeTypeRepo;
+use XF\Repository\NodeType as NodeTypeRepository;
 
 class Setup extends AbstractSetup
 {
@@ -19,19 +19,19 @@ class Setup extends AbstractSetup
 
     public function postInstall(array &$stateChanges): void
     {
-        $repo = Helper::repository(NodeTypeRepo::class);
+        $repo = Helper::repository(NodeTypeRepository::class);
         $repo->rebuildNodeTypeCache();
     }
 
     public function postUpgrade($previousVersion, array &$stateChanges): void
     {
-        $repo = Helper::repository(NodeTypeRepo::class);
+        $repo = Helper::repository(NodeTypeRepository::class);
         $repo->rebuildNodeTypeCache();
     }
 
     public function uninstallStep1(): void
     {
-        $repo = Helper::repository(NodeTypeRepo::class);
+        $repo = Helper::repository(NodeTypeRepository::class);
         $repo->rebuildNodeTypeCache();
     }
 }

@@ -5,7 +5,7 @@ namespace SV\OptimizedListQueries\XF\Finder;
 use SV\StandardLib\Finder\EarlyJoinFinderTrait;
 
 /**
- * @Extends \XF\Finder\Thread
+ * @extends \XF\Finder\Thread
  */
 class Thread extends XFCP_Thread
 {

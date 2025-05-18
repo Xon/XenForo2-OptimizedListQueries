@@ -4,8 +4,10 @@ namespace SV\OptimizedListQueries\XF\Finder;
 
 
 
+use XF\Entity\User as UserEntity;
+
 /**
- * @Extends \XF\Finder\NewsFeed
+ * @extends \XF\Finder\NewsFeed
  */
 class NewsFeed extends XFCP_NewsFeed
 {
@@ -23,7 +25,7 @@ class NewsFeed extends XFCP_NewsFeed
         return $this;
     }
 
-    public function forUser(\XF\Entity\User $user)
+    public function forUser(UserEntity $user)
     {
         if ($user->user_id && $user->Profile->following)
         {

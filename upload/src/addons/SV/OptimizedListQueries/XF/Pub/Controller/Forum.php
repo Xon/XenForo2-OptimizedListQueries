@@ -6,7 +6,7 @@ use SV\OptimizedListQueries\Globals;
 use XF\Mvc\ParameterBag;
 
 /**
- * @Extends \XF\Pub\Controller\Forum
+ * @extends \XF\Pub\Controller\Forum
  */
 class Forum extends XFCP_Forum
 {

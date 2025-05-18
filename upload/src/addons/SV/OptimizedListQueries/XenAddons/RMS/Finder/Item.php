@@ -5,7 +5,7 @@ namespace SV\OptimizedListQueries\XenAddons\RMS\Finder;
 use SV\StandardLib\Finder\EarlyJoinFinderTrait;
 
 /**
- * @Extends \XenAddons\RMS\Finder\Item
+ * @extends \XenAddons\RMS\Finder\Item
  */
 class Item extends XFCP_Item
 {
